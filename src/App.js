@@ -1,15 +1,13 @@
-import logo from './logo.svg';
 import './App.css';
-import { useEffect, useState } from 'react';
+import Header from './components/header/header';
+import Shop from './components/shop/shop';
 
 function App() {
  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo"alt="logo"/>
-        
-      </header>
+    <div>
+      <Header></Header>
+      <Shop></Shop>
     </div>
   );
 }
