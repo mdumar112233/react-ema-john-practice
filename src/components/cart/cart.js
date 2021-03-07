@@ -4,7 +4,7 @@ import React from 'react';
 const Cart = (props) => {
     const cart = props.cart;
 
-    const total = cart.reduce( (total, product) => total + product.price, 0);
+    const total = cart.reduce( (total, product) => total + product.price * product.quantity, 0);
 
 
     let shipping = 0;
@@ -34,6 +34,10 @@ const Cart = (props) => {
             <p>Shipping cost: {shipping}</p>
             <p>Tax + Vat: {tax}</p>
             <p>Total price: {grandtotal}</p>
+            <br/>
+            {
+                props.children
+            }
         </div>
     );
 };
