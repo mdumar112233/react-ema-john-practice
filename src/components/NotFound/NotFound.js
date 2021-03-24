@@ -1,6 +1,7 @@
 import React from 'react';
 
 const NotFound = () => {
+    document.title = 'not found';
     return (
         <div>
             <h3>No match</h3>

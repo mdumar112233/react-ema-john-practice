@@ -5,6 +5,7 @@ import Product from '../product/product';
 import Cart from '../cart/cart';
 import { addToDatabaseCart, getDatabaseCart } from '../../utilities/databaseManager';
 import { Link } from 'react-router-dom';
+import { CircularProgress } from '@material-ui/core';
 
 
 const Shop = () => {
@@ -46,6 +47,9 @@ const Shop = () => {
     return (
         <div className='shop-container'>
             <div className="product-container"> 
+            {
+                products.length === 0 && <CircularProgress />
+            }
                 {
                     products.map(pd => <Product 
                         key={pd.key}
